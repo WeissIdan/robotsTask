@@ -8,15 +8,21 @@ namespace Robots_inc
 {
     public class OperationManager : Worker
     {
-        //1. השלימות את התכונות החסרות
+        double hourlyPay;
+        double hours;
+        int tasksCompleted;
 
-        public OperationManager(string name, string id, DateTime bDate, string pass, ....)
+        public OperationManager(string name, string id, DateTime bDate, string pass, double hourlyPay, double hours, int tasksCompleted)
             : base(name, id, bDate, pass)
         {
-            //2. השלימו את הקוד החסר לשמירת שכר בתכונה המתאימה
+            this.hourlyPay = hourlyPay;
+            this.hours = hours;
+            this.tasksCompleted = tasksCompleted;
         }
 
-        //3. כתבו פעולה דורסת לחישוב שכר
-
+        public override double CalcIncome()
+        {
+            return (hourlyPay * hours) + ((3 / 100) * hourlyPay * tasksCompleted);
+        }
     }
 }
