@@ -50,7 +50,7 @@ namespace Robots_inc
         {
             if (this.GetBatteryStatus() > 2)
             {
-                Console.WriteLine("waving");
+                Console.WriteLine("robot waving");
                 this.SetBatteryStatus(this.GetBatteryStatus() - 2);
             }
 
