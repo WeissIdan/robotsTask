@@ -62,16 +62,20 @@ namespace Robots_inc
                     mnMain.Visibility = Visibility.Hidden;
                     break;
                 case "Operation Manager":   //hide robot and worker menu
-                    workPanel.Background = Brushes.AliceBlue;
                     mnWorkers.Visibility = Visibility.Hidden;
                     break;
                 case "General Manager":
-                    workPanel.Background = Brushes.Brown;
 
                     mnMain.Visibility = Visibility.Visible;
                     break;
             }
 
+        }
+
+        private void ViewWorkers_Click(object sender, RoutedEventArgs e)
+        {
+            workPanel.Children.Clear();
+            activeWorkers.ForEach(worker => { UcWorkers ucWorker = new UcWorkers(worker); workPanel.Children.Add(ucWorker); });
         }
     }
 }

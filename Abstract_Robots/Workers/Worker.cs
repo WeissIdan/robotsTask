@@ -39,14 +39,10 @@ namespace Robots_inc
         }
 
         //משימה 3
-        public void SetPassword(string pass)
-        {
-            this.password = pass;
-        }        
-        public void SetFullName(string name)
-        {
-            this.fullName = name;
-        }
+        public string FullName { get { return fullName; } set { fullName = value; } }
+        public string IdNumber { get { return idNumber; }}
+        public DateTime BirthDate { get { return birthDate; }}
+        public string Password { get { return password; } set { password = value; } }
         //משימה 4
         public abstract double CalcIncome();
 

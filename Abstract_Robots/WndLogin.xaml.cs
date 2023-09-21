@@ -46,11 +46,11 @@ namespace Robots_inc
         public List<Worker> getSixWorkers()
         {
             List<Worker> Cworkers = new List<Worker>();
-            Cworkers.Add(new OperationalWorker("peasentIII", "6", DateTime.Now, "1234567", 70, 72));
-            Cworkers.Add(new OperationalWorker("peasentII", "5", DateTime.Now, "123456", 70, 65));
-            Cworkers.Add(new OperationalWorker("peasent", "4", DateTime.Now, "12345", 70, 70));
-            Cworkers.Add(new OperationManager("mr.managerII", "3", DateTime.Now, "1234567890manager", 150, 70, 25));
-            Cworkers.Add(new OperationManager("mr.manager", "2", DateTime.Now, "1234567890managerII", 150, 65, 28));
+            Cworkers.Add(new OperationalWorker("peasentIII", "6", DateTime.Now.AddDays(-2), "1234567", 70, 72));
+            Cworkers.Add(new OperationalWorker("peasentII", "5", DateTime.Now.AddDays(-6), "123456", 70, 65));
+            Cworkers.Add(new OperationalWorker("peasent", "4", DateTime.Now.AddHours(3), "12345", 70, 70));
+            Cworkers.Add(new OperationManager("mr.managerII", "3", DateTime.Now.AddMonths(2), "1234567890manager", 150, 70, 25));
+            Cworkers.Add(new OperationManager("mr.manager", "2", DateTime.Now.AddMonths(5), "1234567890managerII", 150, 65, 28));
             Cworkers.Add(new GeneralManager("mr.ceo", "1", DateTime.Now, "1234567890ceo", 90000.8, false));
             return Cworkers;
         }
